@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzFmMjkzNyIvPgogIAogIDwhLS0gTGVmdCBwYWdlIC0tPgogIDxwYXRoIGQ9Ik02IDhMMTYgMTJMMTYgMjhMNiAyNEwiIGZpbGw9IndoaXRlIi8+CiAgCiAgPCEtLSBSaWdodCBwYWdlIC0tPgogIDxwYXRoIGQ9Ik0yNiA4TDE2IDEyTDE2IDI4TDI2IDI0WiIgZmlsbD0id2hpdGUiLz4KCiAgPCEtLSBTcGluZSAobWlkZGxlIGxpbmUpIC0tPgogIDxsaW5lIHgxPSIxNiIgeTE9IjEyIiB4Mj0iMTYiIHkyPSIyOCIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjEiLz4KCiAgPCEtLSBQYWdlIGRldGFpbCBsaW5lcyAtLT4KICA8bGluZSB4MT0iOCIgeTE9IjE0IiB4Mj0iMTQiIHkyPSIxNiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogIDxsaW5lIHgxPSIxOCIgeTE9IjE2IiB4Mj0iMjQiIHkyPSIxNCIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjAuOCIvPgo8L3N2Zz4=">
     <title>8. Sınıf Matematik - LGS Çalışma Aracı</title>
     <style>
         * {
@@ -1419,7 +1420,6 @@ function goBack() {
     const tab = document.querySelector('.nav-tab.active');
     if (tab) {
         showSection(lastActiveSection, tab);
-        // Re-render grids so progress badges update
         renderDashboard();
         renderDonem1();
         renderDonem2();
@@ -1753,7 +1753,6 @@ function retryMistakes() {
     mixedScore = 0;
     mixedSelectedOption = null;
 
-    // Switch to mixed section visually
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.getElementById('mixed').classList.add('active');
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -1878,7 +1877,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateStats();
     updateMistakeCount();
     startStudyTimer();
-    // Restore study time display immediately
     const total = getStudyTime();
     const m = Math.floor(total / 60).toString().padStart(2, '0');
     const s = (total % 60).toString().padStart(2, '0');
